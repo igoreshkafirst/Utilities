@@ -53,7 +53,7 @@ $LatestStableVersion = (Invoke-RestMethod @Parameters).LATEST_FIREFOX_VERSION
 
 $DownloadsFolder = Get-ItemPropertyValue -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" -Name "{374DE290-123F-4565-9164-39C4925E467B}"
 $Parameters = @{
-	Uri             = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$LatestStableVersion/win32/$Language/Firefox%20Setup%20$LatestStableVersion.exe"
+	Uri             = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$LatestStableVersion/win64/$Language/Firefox%20Setup%20$LatestStableVersion.exe"
 	# Uri           = "https://download.mozilla.org/?product=firefox-latest-ssl&os=win&lang=$Language"
 	# Uri           = "https://ftp.mozilla.org/pub/firefox/releases/$LatestStableVersion/win64-EME-free/$Language/Firefox%20Setup%20$LatestStableVersion.exe"
 	OutFile         = "$DownloadsFolder\Firefox Setup $LatestStableVersion.exe"
