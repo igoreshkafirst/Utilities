@@ -16,8 +16,8 @@ try
 	# https://github.com/BetterDiscord/BetterDiscord
 	$DownloadsFolder = Get-ItemPropertyValue -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" -Name "{374DE290-123F-4565-9164-39C4925E467B}"
 	$Parameters = @{
-		Uri             = "https://github.com/BetterDiscord/Installer/releases/latest/download/BetterDiscord-Windows.exe"
-		OutFile         = "$DownloadsFolder\BetterDiscord-Windows.exe"
+		Uri             = "https://github.com/BetterDiscord/Installer/releases/latest/download/BetterDiscord-Installer-Windows.exe"
+		OutFile         = "$DownloadsFolder\BetterDiscord-Installer-Windows.exe"
 		UseBasicParsing = $true
 		Verbose         = $true
 	}
@@ -35,8 +35,8 @@ catch [System.Net.WebException]
 Get-Process -Name Discord -ErrorAction Ignore | Stop-Process -Force
 
 
-Start-Process -FilePath "$DownloadsFolder\BetterDiscord-Windows.exe" -Wait
-Remove-Item -Path "$DownloadsFolder\BetterDiscord-Windows.exe" -Force
+Start-Process -FilePath "$DownloadsFolder\BetterDiscord-Installer-Windows.exe" -Wait
+Remove-Item -Path "$DownloadsFolder\BetterDiscord-Installer-Windows.exe" -Force
 
 Write-Information -MessageData "" -InformationAction Continue
 Write-Verbose -Message "Downloading Fluent Discord Theme" -Verbose
