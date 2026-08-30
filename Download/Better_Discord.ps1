@@ -86,4 +86,4 @@ catch [System.Net.WebException]
 	exit
 }
 
-& $env:LOCALAPPDATA\Discord\Update.exe --processStart Discord.exe
+# & $env:LOCALAPPDATA\Discord\Update.exe --processStart Discord.exe
